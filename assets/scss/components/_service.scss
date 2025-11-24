@@ -1,0 +1,360 @@
+.service-inner {
+    padding-left: 150px;
+    padding-right: 150px;
+    @include respond(lg) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.service-item {
+    max-width: 360px;
+    text-align: center;
+    margin: 0 auto;
+    .xb-item {
+        &--icon {
+            width: 180px;
+            height: 180px;
+            background-color: var(--color-white);
+            border-radius: 90px 10px;
+            @include center;
+            margin: 0 auto;
+            margin-bottom: 47px;
+            position: relative;
+            img {
+                width: 128px;
+            }
+            &::before {
+                position: absolute;
+                bottom: -27px;
+                left: 0;
+                content: "";
+                width: 160px;
+                height: 15px;
+                background-image: url(../img/shape/service_blur.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                right: 0;
+                margin: auto;
+            }
+        }
+        &--title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 13px;
+            a {
+                color: currentColor;
+            }
+        }
+    }
+    &.middle {
+        margin-top: 154px;
+        @include respond(md) {
+            margin-top: 0;
+        }
+    }
+}
+.service-btn {
+    .thm-btn {
+        min-width: 250px;
+    }
+}
+.service-circle-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+}
+.service-shape {
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &--1 {
+            bottom: 60px;
+            left: 85px;
+        }
+        &--2 {
+            bottom: 65px;
+            right: 48px;
+        }
+    }
+}
+.service-content-list {
+	margin-left: 58px;
+    @include respond(lg) {
+        margin-left: 0;
+    }
+}
+.service-list-item {
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+    opacity: .6;
+    @include respond(xs) {
+        gap: 30px;
+    }
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #ffffff;
+        content: "";
+        @include transition(.3s);
+    }
+    &:hover,
+    &.current {
+        opacity: 1;
+    }
+    &:hover::before,
+    &.current::before {
+        width: 100%;
+    }
+    &:not(:last-child) {
+        margin-bottom: 36px;
+    }
+    .xb-item {
+        &--inner {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        &--title {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 24px;
+            text-transform: capitalize;
+            color: #fff;
+            @include respond(laptop) {
+                font-size: 18px;
+            }
+        }
+        &--link {
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+            svg {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.service-content-image {
+	position: relative;
+    min-height: 685px;
+    @include respond(lg) {
+        min-height: 400px;
+    }
+    .xb-item {
+        &--img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: .5s;
+            z-index: 1;
+            @include border-radius(20px);
+            &.active {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
+}
+.mh-service-btn .thm-btn:hover {
+	background-color: var(--color-dark);
+}
+.service-feature-item {
+    flex-wrap: nowrap;
+    position: relative;
+    background: linear-gradient(90deg, #ffe0e0 0%, #fff4f4 99.23%);
+    padding: 15px;
+    @include border-radius(20px);
+    @include respond(lg) {
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+        padding: 40px;
+    }
+    @include respond(xs) {
+        padding: 40px 20px;
+    }
+    .xb-item {
+        &--image {
+            width: 506px;
+            margin-right: 152px;
+            @include respond(lg) {
+                margin: 0 auto;
+            }
+        }
+        &--title {
+            max-width: 477px;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 133%;
+            text-transform: uppercase;
+            color: #304049;
+            @include respond(lg) {
+                margin: 0 auto;
+            }
+        }
+        &--content {
+            max-width: 440px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 144%;
+            text-transform: capitalize;
+            color: #304049;
+            margin-left: auto;
+            @include respond(lg) {
+                margin: 0 auto;
+            }
+        }
+    }
+    &:nth-child(even) {
+        background: #edf9ff;
+        flex-direction: row-reverse;
+        padding-left: 50px;
+        @include respond(xs) {
+            padding-left: 20px;
+        }
+        .xb-item {
+            &--image {
+                margin-right: 0;
+                margin-left: 152px;
+                @include respond(lg) {
+                    margin: 0 auto;
+                }
+            }
+            &--title {
+                order: 1;
+                @include respond(lg) {
+                    order: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.mh-service-feature .thm-btn:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    span:after {
+        filter: brightness(100);
+    }
+}
+.counceling-service-item {
+    padding: 47px 40px 75px 40px;
+    background-color: var(--color-white);
+    margin-top: 14px;
+    @include border-radius(20px);
+    position: relative;
+    @include transition(.3s);
+    .xb-item {
+        &--icon {
+            margin-bottom: 25px;
+        }
+        &--title {
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 125%;
+            text-transform: capitalize;
+            color: #304049;
+            max-width: 312px;
+            @include respond(laptop) {
+                font-size: 26px;
+            }
+        }
+        &--link {
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            width: 64px;
+            height: 64px;
+            @include border-radius(50%);
+            background: linear-gradient(357deg, #eef8ff 0%, #e9fbff 100%);
+            @include center;
+            z-index: 1;
+            overflow: hidden;
+            @include respond(laptop) {
+                bottom: 20px;
+                right: 15px;
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--color-primary);
+                z-index: -1;
+                content: "";
+                @include transition(.3s);
+                opacity: 0;
+            }
+            svg path {
+                @include transition(.3s);
+            }
+        }
+    }
+    &:hover {
+        .xb-item {
+            &--link {
+                &::before {
+                    opacity: 1;
+                }
+                svg path {
+                    fill: var(--color-white);
+                }
+            }
+            &--icon {
+                -webkit-animation: xb-danceTop 600ms ease-in-out;
+                animation: xb-danceTop 600ms ease-in-out;
+            }
+        }
+    }
+}
+.counceling-service-shape {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    z-index: -1;
+}
+.counceling-service-btn {
+    .thm-btn {
+        min-width: 266px;
+    }
+}
+.service-single-inner {
+	padding: 0 35px;
+    @include respond(laptop) {
+        padding: 0 15px;
+    }
+    @include respond(md) {
+        padding: 0px 15px;
+    }
+    @include respond(xs) {
+        padding: 0;
+    }
+}
+.service-single-image {
+	padding-left: 47px;
+    @include respond(laptop) {
+        padding-left: 20px;
+    }
+    @include respond(md) {
+        padding-left: 0;
+    }
+}
+.service-info-btn {
+    .thm-btn {
+        min-width: 246px;
+    }
+}

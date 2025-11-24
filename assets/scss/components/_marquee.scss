@@ -1,0 +1,16 @@
+.counceling-marquee {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--color-primary);
+    display: inline-block;
+    background: linear-gradient(270deg, #ffe0e0 0%, #fff4f4 100%);
+    padding: 27px 0;
+    font-family: var(--font-heading);
+    @include respond(xs) {
+        font-size: 30px;
+    }
+    img {
+        margin: 0 10px;
+    }
+}

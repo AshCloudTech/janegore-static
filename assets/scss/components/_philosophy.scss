@@ -1,0 +1,44 @@
+.philosophy-inner {
+    padding: 0 25px;
+}
+.philosophy-item {
+    background-color: var(--color-white);
+    padding: 75px 29px;
+    @include border-radius(20px);
+    min-height: 511px;
+    @include respond(lg) {
+        min-height: 400px;
+    }
+    .xb-item {
+        &--subtitle {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.1;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        &--title {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 20px;
+            @include respond(laptop) {
+                font-size: 30px;
+                line-height: 38px;
+            }
+            @include respond(xs) {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+        &--content {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            color: #304049;
+        }
+    }
+}
+.philosophy-btn .thm-btn {
+	min-width: 245px;
+}

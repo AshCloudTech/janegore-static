@@ -1,0 +1,104 @@
+.history-slider-nav {
+    margin-left: -60px;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        background: rgba(10, 9, 9, 0.5);
+        content: "";
+        height: 100%;
+    }
+    .swiper-slide-thumb-active  {
+        .history-slider-thumb::before {
+            opacity: 0;
+        }
+    }
+    .swiper-wrapper {
+        -webkit-animation: marqueeX 16s linear infinite;
+        animation: marqueeX 16s linear infinite;
+        background-repeat: repeat-x;
+        background-size: contain;
+        position: relative;
+        &::before,
+        &::after {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 300%;
+            height: 40px;
+            background-image: url(../img/shape/history_slider_shape.svg);
+            content: "";
+            background-repeat: repeat-x;
+            background-size: contain;
+            will-change: transform;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+        &::after {
+            top: auto;
+            bottom: -40px;
+        }
+    }
+}
+.history-slider-thumb {
+	height: 171px;
+    cursor: pointer;
+    position: relative;
+    @include border-radius(10px);
+    overflow: hidden;
+    @include respond(lg) {
+        height: 120px;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(154, 154, 154, 0.4);
+        content: "";
+        transition: .3s;
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.history-slider-content {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    color: #304049;
+}
+.history-slider-inner {
+    margin-left: -50px;
+    @include respond(lg) {
+        margin-left: 0;
+    }
+}
+.history-content {
+	padding-right: 100px;
+    @include respond(laptop) {
+        padding-right: 70px;
+    }
+    @include respond(lg) {
+        padding-right: 0;
+    }
+    .sec-title {
+        .xb-item--content {
+            padding-right: 50px;
+            @include respond(laptop) {
+                padding-right: 0;
+            }
+            @include respond(lg) {
+                padding-right: 0;
+            }
+        }
+    }
+}
+.history-slider-image {
+    @include border-radius(20px);
+    overflow: hidden;
+}

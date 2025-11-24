@@ -1,0 +1,138 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    ul {
+        @include d-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 50px;
+                @include respond(laptop) {
+                    margin-right: 30px;
+                }
+            }
+            a {
+                z-index: 3;
+                font-weight: 600;
+                font-size: 18px;
+                position: relative;
+                padding: 32px 0;
+                text-decoration: none;
+                display: inline-block;
+                color: var(--color-white);
+                font-family: var(--font-body);
+                text-transform: capitalize;
+            }
+            &.menu-item-has-children {
+                & > a {
+                    span::after {
+                        content: '\f107';
+                        font-weight: 400;
+                        color: currentColor;
+                        margin: 1px 0 0 3px;
+                        font-family: "Font Awesome 6 Pro";
+                        font-size: 17px;
+                    }
+                }
+                &:hover > .submenu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0px);
+                }
+            }
+            .submenu {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                position: absolute;
+                min-width: 240px;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                z-index: 3;
+                top: 100%;
+                padding: 30px 20px; 
+                text-align: left;
+                visibility: hidden;
+                background: #fff;
+                @include transition(.3s);
+                @include border-radius(3px);
+                transform: translateY(10px);
+                box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.10);
+                li {
+                    padding: 0 6px;
+                    margin-right: 0;
+                    &:not(:last-child) {
+                        margin-bottom: 13px;
+                    }
+                    a {
+                        padding: 0;
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 600;
+                        letter-spacing: 0;
+                        position: relative;
+                        text-transform: capitalize;
+                        @include border-radius(5px);
+                        color: var(--color-heading);
+                        @include transition(.3s);
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            top: 45%;
+                            height: 2px;
+                            width: 10px;
+                            opacity: 0;
+                            text-decoration: left;
+                            @include transition(0.3s);
+                            background: var(--color-primary);
+                            @include transform(translateY(50%));
+                        }
+                    }
+                    ul {
+                        left: 100%;
+                        top: 0px;
+                    }
+                    &:hover > a,
+                    &.active > a {
+                        color: var(--color-primary);
+                        padding-left: 20px;
+                        &::after {
+                            opacity: 1;
+                        }
+                        span::after {
+                            color: var(--color-primary) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-menu ul li.menu-last ul.submenu {
+	right: 0;
+	left: auto;
+}
+.main-menu ul li.menu-last ul.submenu ul {
+    right: auto;
+    left: -100%;
+}
+.main-menu ul li ul.submenu .menu-item-has-children > a span::after {
+	position: absolute;
+    top: 0px;
+    right: 10px;
+    content: "\e59e";
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Font Awesome 6 Pro';
+    @include transition(.3s);
+    transform: rotate(-90deg);
+    color: var(--color-heading);
+}
+

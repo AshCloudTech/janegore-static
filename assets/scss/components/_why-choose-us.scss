@@ -1,0 +1,27 @@
+.why-choose-us-content {
+    padding: 97px 80px;
+    padding-right: 85px;
+    @include respond(laptop) {
+        padding: 97px 30px;
+    }
+    @include respond(lg) {
+        padding: 97px 30px;
+    }
+}
+.why-choose-us-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    @include respond(md) {
+        position: unset;
+        height: 300px;
+        width: 100%;
+    }
+}
+.why-choose-us-btn {
+    .thm-btn {
+        min-width: 276px;
+    }
+}

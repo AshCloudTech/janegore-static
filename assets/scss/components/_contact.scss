@@ -1,0 +1,176 @@
+.counceling-form {
+    margin-top: -65px;
+    .ui-widget-content {
+        margin-left: 0;
+    }
+    .xb-item {
+        &--field {
+            position: relative;
+            margin-top: 65px;
+            label {
+                font-weight: 700;
+                font-size: 20px;
+                color: #fff;
+                margin-bottom: 9px;
+            }
+            input,
+            textarea,
+            .nice-select {
+                background: transparent;
+                border-bottom: 1px solid #fff;
+                color: var(--color-white);
+                padding: 20px 0;
+                @include border-radius(0);
+                height: 55px;
+                &::placeholder {
+                    color: #FFE3E3;
+                }
+            }
+            textarea {
+                min-height: 120px;
+            }
+            .nice-select {
+                padding: 0;
+                color: #FFE3E3;
+                &::after {
+                    border-bottom: 1.9px solid #FFF;
+                    border-right: 1.9px solid #FFF;
+                    height: 11px;
+                    right: 5px;
+                    width: 11px;
+                }
+            }
+            .icon {
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+            }
+        }
+    }
+}
+.demo_counceling {
+    .ui-widget.ui-widget-content {
+        margin-left: 0;
+    }
+}
+.counceling-contact-content {
+    padding-right: 100px;
+    @include respond(lg) {
+        padding-right: 0;
+    }
+}
+.contact-inner {
+    padding: 0 38px;
+    @include respond(xs) {
+        padding: 0;
+    }
+}
+.contact-form {
+    background-color: var(--color-white);
+    padding: 70px 54px;
+    @include border-radius(20px);
+    @include respond(laptop) {
+        padding: 70px 30px;
+    }
+    @include respond(xs) {
+        padding: 50px 30px;
+    }
+    .xb-item {
+        &--item {
+            margin-bottom: 40px;
+            input,
+            textarea {
+                border-bottom: 1.50px solid rgba(48, 64, 73, 0.4);
+                background-color: transparent;
+                padding: 18px 0;
+                height: 64px;
+                &:focus,
+                &:hover {
+                    border-color: var(--color-primary);
+                }
+                &::placeholder {
+                    color: rgba(48, 64, 73, 0.4);
+                }
+            }
+            textarea {
+                min-height: 100px;
+            }
+            label {
+                font-weight: 500;
+                font-size: 22px;
+                color: #304049;
+            }
+        }
+    }
+    button {
+        width: 100%;
+    }
+}
+.form-check-input:checked {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+.form-check-input:focus {
+	border-color: var(--color-primary);
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(160, 68, 68, 0.25);
+}
+.google-map {
+    height: 663px;
+    @include border-radius(20px);
+    overflow: hidden;
+    @include respond(md) {
+        height: 400px;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+.contact-info-inner {
+    margin-top: 30px;
+    padding: 75px 31px 46px;
+    background: rgba(255, 255, 255, 0.5);
+    @include border-radius(20px);
+    @include respond(xs) {
+        padding: 45px 25px 40px;
+    }
+}
+.contact-info-title {
+    h3 {
+        font-weight: 500;
+        font-size: 30px;
+        color: #304049;
+        margin-bottom: 10px;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        color: #304049;
+    }
+}
+.contact-info {
+    li {
+        font-weight: 400;
+        font-size: 20px;
+        color: #304049;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 30px 20px;
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border: 1px dashed var(--color-dark);
+            @include border-radius(30px);
+        }
+        .label {
+            font-weight: 400;
+            font-size: 20px;
+            color: rgba(48, 64, 73, 0.4);
+        }
+    }
+}

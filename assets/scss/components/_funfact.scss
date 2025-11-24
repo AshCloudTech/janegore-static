@@ -1,0 +1,173 @@
+.funfact-image {
+    max-height: 1146px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding-left: 110px;
+    @include respond(laptop) {
+        padding-left: 30px;
+    }
+    @include respond(lg) {
+        padding-left: 20px;
+        margin-right: 30px;
+    }
+}
+.funfact-image-inner {
+    -webkit-animation: marquee 15s linear infinite;
+    animation: marquee 15s linear infinite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    &.marquee-2 {
+        -webkit-animation: marquee2 15s linear infinite;
+        animation: marquee2 15s linear infinite;
+    }
+    .xb-item {
+        &--img {
+            max-width: 284px;
+        }
+    }
+}
+.funfact-content {
+    padding-left: 15px;
+    max-width: 670px;
+    @include respond(md) {
+        padding-top: 30px;
+    }
+    .xb-item--content {
+        max-width: 595px;
+    }
+}
+.funfact-list {
+    li {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        span {
+            @include center;
+            width: 46px;
+            height: 46px;
+            border: 1px dashed var(--color-white);
+            @include border-radius(50%);
+        }
+    }
+}
+.funfact-btn {
+    .thm-btn {
+        min-width: 232px;
+        &:hover {
+            background-color: #304049;
+        }
+    }
+}
+.funfact-shape {
+    position: absolute;
+    bottom: 158px;
+    right: 95px;
+    z-index: -1;
+}
+.funfact-top-content {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 127%;
+    text-align: center;
+    color: #304049;
+}
+.funfact-content-inner {
+    padding-right: 100px;
+    @include respond(lg) {
+        padding-right: 0;
+        text-align: center;
+    }
+}
+.funfact-counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: -10px;
+    @include respond(laptop) {
+        margin-left: -70px;
+    }
+    @include respond(lg) {
+        margin-left: 0;
+    }
+    @include respond(xs) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .xb-item {
+        &--item {
+            text-align: right;
+            padding: 50px;
+            @include respond(laptop) {
+                text-align: center;
+                padding: 40px 25px;
+            }
+            @include respond(xs) {
+                border: none !important;
+                padding: 30px !important;
+                text-align: center !important;
+            }
+            p {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 91%;
+                color: #304049;
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+                text-align: left;
+                @include respond(laptop) {
+                    text-align: center;
+                }
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+                @include respond(laptop) {
+                    padding-top: 25px;
+                }
+            }
+            &:nth-child(1) {
+                padding-top: 102px;
+                border-right: 1px solid rgba(48, 64, 73, 0.3);
+                border-bottom: 1px solid rgba(48, 64, 73, 0.3);
+            }
+            &:nth-child(2) {
+                padding-top: 102px;
+                border-bottom: 1px solid rgba(48, 64, 73, 0.3);
+            }
+            &:nth-child(3) {
+                padding-top: 42px;
+                padding-bottom: 122px;
+                border-right: 1px solid rgba(48, 64, 73, 0.3);
+                @include respond(laptop) {
+                    padding-top: 25px;
+                }
+            }
+            &:nth-child(3) {
+                padding-top: 42px;
+                padding-bottom: 122px;
+                @include respond(laptop) {
+                    padding-top: 25px;
+                }
+            }
+        }
+        &--number {
+            font-size: 80px;
+            margin: 0 0 10px;
+            font-weight: 500;
+            @include respond(laptop) {
+                font-size: 55px;
+            }
+            @include respond(xs) {
+                font-size: 50px;
+            }
+        }
+    }
+}

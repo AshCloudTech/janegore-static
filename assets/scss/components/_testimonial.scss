@@ -1,0 +1,286 @@
+.testimonial-inner {
+    margin-right: 10px;
+    overflow: hidden;
+}
+.testimonial-slider {
+    margin-left: 35px;
+    overflow: hidden;
+    margin-right: -687px;
+    @include respond(lg) {
+        margin-right: 0;
+    }
+    @include respond(md) {
+        margin-left: 0;
+    }
+}
+.testimonial-item {
+    background-color: var(--color-white);
+    padding: 40px;
+    padding-top: 35px;
+    @include border-radius(20px);
+    z-index: 1;
+    position: relative;
+    min-height: 822px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .xb-item {
+        &--quote {
+            margin-bottom: 35px;
+        }
+        &--title {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 30px;
+            max-width: 95%;
+            @include respond(lg) {
+                font-size: 32px;
+                line-height: 45px;
+            }
+            @include respond(md) {
+                font-size: 26px;
+                line-height: 36px;
+                max-width: 100%;
+            }
+            span {
+                color: var(--color-primary);
+            }
+        }
+        &--content {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 200px;
+            @include respond(md) {
+                margin-bottom: 110px;
+            }
+        }
+        &--author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        &--avatar {
+            width: 100px;
+            height: 100px;
+            @include border-radius(50%);
+            overflow: hidden;
+        }
+        &--name {
+            font-size: 30px;
+        }
+        &--desig {
+            font-size: 20px;
+        }
+        &--shape {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            z-index: -1;
+            @include respond(md) {
+                right: 20px;
+                max-width: 70px;
+            }
+        }
+    }
+}
+.testimonial-shape {
+    position: absolute;
+    bottom: 52px;
+    left: 50px;
+    z-index: -1;
+}
+.mh-testimonial-item {
+    min-height: 475px;
+    padding: 42px 30px;
+    @include border-radius(20px);
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    position: relative;
+    padding-right: 50px;
+    &:hover {
+        .xb-item {
+            &--image {
+                @include transform(scale(1.2));
+            }
+            &--name,
+            &--desc {
+                opacity: 0;
+                visibility: hidden;
+                @include transform(translateY(30px));
+            }
+            &--name {
+                transition-delay: .1s;
+            }
+            &--video {
+                top: 50%;
+                opacity: 1;
+                visibility: visible;
+                transition-delay: .2s;
+            }
+        }
+    }
+    .xb-item {
+        &--image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include transition(.3s);
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(178deg, rgba(1, 1, 1, 0) 0%, rgba(87, 5, 5, 0.98) 100%);
+                content: "";
+            }
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/shape/testimonial_notch.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                content: "";
+            }
+        }
+        &--content {
+            position: relative;
+            z-index: 1;
+        }
+        &--video {
+            position: absolute;
+            z-index: 1;
+            top: 40%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s);
+            .popup-video {
+                width: 166px;
+                height: 175px;
+                @include border-radius(50%);
+                background-color: var(--color-primary);
+                @include center;
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                text-align: center;
+                color: #fff;
+                padding: 20px;
+            }
+
+        }
+        &--name {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 10px;
+            @include transition(.3s);
+        }
+        &--desc {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 144%;
+            color: #fff;
+            @include transition(.3s);
+        }
+    }
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+}
+.mh-testimonial-slider {
+    margin-right: -90px;
+    @include respond(xs) {
+        margin-right: 0;
+    }
+}
+.counceling-testimonial-slider {
+    margin-right: -100px;
+    @include respond(lg) {
+        margin-right: 0;
+    }
+}
+.counceling-testimonial-item {
+    padding: 30px 40px 33px;
+    background: linear-gradient(180deg, #ffe0e0 0%, #fff4f4 100%);
+    position: relative;
+    @include border-radius(20px);
+    min-height: 553px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    &.bg-2 {
+        background: linear-gradient(357deg, #eef8ff 0%, #e9fbff 100%);
+    }
+    &:hover {
+        .animated-path {
+            animation: drawLine 60s linear infinite;
+        }
+    }
+    .xb-item {
+        &--quote {
+            margin-bottom: 30px;
+        }
+        &--border svg {
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        &--author {
+            margin-top: auto;
+        }
+        &--content {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+            color: #304049;
+            margin-bottom: 18px;
+        }
+        &--avatar {
+            width: 70px;
+            height: 70px;
+            @include border-radius(50%);
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        &--name {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 20px;
+            color: #304049;
+            margin-bottom: 4px;
+        }
+        &--desig {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            text-transform: capitalize;
+            text-align: center;
+            color: #304049;
+        }
+    }
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+

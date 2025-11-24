@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'JazminAlt';
+    src: url('../fonts/JazminAlt-Medium.woff2') format('woff2'),
+    url('../fonts/JazminAlt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JazminAlt';
+    src: url('../fonts/JazminAlt-Medium.woff2') format('woff2'),
+    url('../fonts/JazminAlt-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('../fonts/segoesc.woff2') format('woff2'),
+    url('../fonts/segoesc.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
