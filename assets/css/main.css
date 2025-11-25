@@ -9436,3 +9436,21 @@ abbr[title] {
         width: 100%;
     }
 }
+@media (max-width: 767px) {
+  .faq {
+    padding-bottom: 0 !important;
+  }
+  .faq .xb-faq.pb-120 {
+    padding-bottom: 58px !important;
+  }
+   section.testimonial {
+    margin-top: 0 !important;
+  }
+    .sec-title--xl {
+        margin-bottom: 0px;
+    }
+    .xb-item--title {
+        margin-top: 15px;
+    }
+}
+
