@@ -4964,15 +4964,15 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   -o-border-radius: 20px;
   z-index: 1;
   position: relative;
-  min-height: 690px;
+  min-height: 550px;
   display: flex;
   justify-content: space-between;
   flex-direction: column; }
   .testimonial-item .xb-item--quote {
     margin-bottom: 35px; }
   .testimonial-item .xb-item--title {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 38px;
     margin-bottom: 30px;
     max-width: 95%; }
     @media (max-width: 1199px) {
@@ -4981,9 +4981,14 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
         line-height: 45px; } }
     @media (max-width: 991px) {
       .testimonial-item .xb-item--title {
-        font-size: 26px;
+        font-size: 18px;
         line-height: 36px;
-        max-width: 100%; } }
+        max-width: 100%; 
+      }
+      .testimonial-item .xb-item--avatar {
+        width:30px ;
+      }
+     }
     .testimonial-item .xb-item--title span {
       color: var(--color-primary); }
   .testimonial-item .xb-item--content {
@@ -4998,7 +5003,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     align-items: center;
     gap: 20px; }
   .testimonial-item .xb-item--avatar {
-    width: 100px;
+    width: 80px;
     height: 100px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -5007,9 +5012,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     -o-border-radius: 50%;
     overflow: hidden; }
   .testimonial-item .xb-item--name {
-    font-size: 30px; }
-  .testimonial-item .xb-item--desig {
     font-size: 20px; }
+  .testimonial-item .xb-item--desig {
+    font-size: 15px; }
   .testimonial-item .xb-item--shape {
     position: absolute;
     bottom: 40px;
@@ -5019,6 +5024,14 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       .testimonial-item .xb-item--shape {
         right: 20px;
         max-width: 70px; } }
+.custom-footer-logo .footer-logo img {
+    transform: scale(2);
+    transform-origin: top left;
+}
+@media (max-width: 767px) {
+    .custom-footer-logo .footer-logo img {
+        transform: none;      }
+  }
 
 .testimonial-shape {
   position: absolute;
@@ -5427,6 +5440,9 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       .appointment-info-item .xb-item--title {
         font-size: 16px;
         line-height: 29px; } }
+  .appointment-info p{
+    color: #ffffff;
+  }
 
 .blog-item {
   display: flex;
