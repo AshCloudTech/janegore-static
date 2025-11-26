@@ -49,10 +49,9 @@
     <!-- Preloader - End -->
 
     <div class="body_wrap o-clip">
-
-        <p class="hero-top-content text-center">
-            Need to talk? <a href="mailto:jane@janegoretherapy.com">jane@janegoretherapy.com</a> | <a
-                href="tel:+447957111111">+447957111111</a> | <a href="https://wa.me/447957111111" target="_blank"
+<p class="hero-top-content text-center">
+            Need to talk? <a href="mailto:jane@janegoretherapy.com">jb.therapy@hotmail.com</a> | <a
+                href="tel:+447957111111">+07577 158568</a> | <a href="https://wa.me/447957111111" target="_blank"
                 rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
         </p>
         <!-- header start -->
@@ -74,70 +73,107 @@
 
                                     </li>
                                     <li><a href="about.html"><span>About</span></a></li>
-                                    <li class="menu-item-has-children">
+                                        <li class="menu-item-has-children">
                                         <a href="services.html"><span>Services</span></a>
 
-                                        <ul class="submenu">
-                                            <h5 class="card-title">Counselling & Therapy Services</h5>
-                                            <li>
-                                                <a href="service-1.html"><span>Adult Individual Therapy</span>
-                                                    <!-- <div class="card">
-                                                        <div class="card-body">
-                                                            <p class="card-text">Offers a supportive and confidential
-                                                                space to explore personal challenges, gain insight, and
-                                                                develop effective coping strategies. Tailored to your
-                                                                unique needs, it helps you navigate life’s difficulties,
-                                                                improve emotional well-being, and foster personal
-                                                                growth.</p>
-                                                        </div>
-                                                    </div> -->
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service-2.html"><span>Adult Individual Therapy</span>
-                                                    <!-- <div class="card">
-                                                        <div class="card-body">
-                                                            <p class="card-text">Offers a supportive and confidential
-                                                                space to explore personal challenges, gain insight, and
-                                                                develop effective coping strategies. Tailored to your
-                                                                unique needs, it helps you navigate life’s difficulties,
-                                                                improve emotional well-being, and foster personal
-                                                                growth.</p>
-                                                        </div>
-                                                    </div> -->
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service-3.html"><span>Adult Individual Therapy</span>
-                                                    <!-- <div class="card">
-                                                        <div class="card-body">
-                                                            <p class="card-text">Offers a supportive and confidential
-                                                                space to explore personal challenges, gain insight, and
-                                                                develop effective coping strategies. Tailored to your
-                                                                unique needs, it helps you navigate life’s difficulties,
-                                                                improve emotional well-being, and foster personal
-                                                                growth.</p>
-                                                        </div>
-                                                    </div> -->
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="service-4.html"><span>Adult Individual Therapy</span>
-                                                    <!-- <div class="card">
-                                                        <div class="card-body">
-                                                            <p class="card-text">Offers a supportive and confidential
-                                                                space to explore personal challenges, gain insight, and
-                                                                develop effective coping strategies. Tailored to your
-                                                                unique needs, it helps you navigate life’s difficulties,
-                                                                improve emotional well-being, and foster personal
-                                                                growth.</p>
-                                                        </div>
-                                                    </div> -->
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
 
+                                         <ul class="submenu submenu--mega">
+                                            <li class="submenu-heading">
+                                                <h5 class="card-title">Counselling & Therapy Services</h5>
+                                            </li>
+
+                                            <li class="submenu-card">
+                                                <a href="service-details1.html"><span>Adult Individual Therapy</span></a>
+                                                <p>Explore challenges, gain insight, and develop coping strategies in a
+                                                    supportive, confidential space.</p>
+                                            </li>
+
+                                            <li class="submenu-card">
+                                                <a href="service-details2.html"><span>Adolescent Therapy</span></a>
+                                                <p>Non-judgmental support for teens to build resilience, confidence, and
+                                                    healthy coping skills.</p>
+                                            </li>
+
+                                            <li class="submenu-card">
+                                                <a href="service-details3.html"><span>Psychosexual Therapy</span></a>
+                                                <p>Address sexual concerns and intimacy issues with a safe, tailored,
+                                                    evidence-based approach.</p>
+                                            </li>
+
+                                            <li class="submenu-card">
+                                                <a href="service-details4.html"><span>Couples Therapy</span></a>
+                                                <p>Improve communication, rebuild trust, and strengthen your
+                                                    relationship together.</p>
+                                            </li>
+
+                                            <!-- Optional: add more items; they will auto-wrap to the next row -->
+                                        </ul>
+
+
+                                        <style>
+                                            @media (min-width: 1200px) {
+
+                                                /* Show the dropdown on hover for desktop (keep your existing behavior if already present) */
+                                                .main-menu .menu-item-has-children:hover>.submenu {
+                                                    display: block;
+                                                    visibility: visible;
+                                                    opacity: 1;
+                                                }
+
+                                                /* Mega submenu layout */
+                                                .main-menu .submenu.submenu--mega {
+                                                    display: grid;
+                                                    grid-template-columns: repeat(3, minmax(220px, 1fr));
+                                                    gap: 16px;
+                                                    min-width: 720px;
+                                                    /* ensures 3-up room */
+                                                    padding: 16px;
+                                                    margin-top: 12px;
+                                                }
+
+                                                /* Reset base submenu item styling if your theme uses inline rows */
+                                                .main-menu .submenu.submenu--mega>li {
+                                                    list-style: none;
+                                                }
+
+                                                /* Heading spans full width of grid */
+                                                .main-menu .submenu.submenu--mega>.submenu-heading {
+                                                    grid-column: 1 / -1;
+                                                    margin-bottom: 4px;
+                                                    padding: 0;
+                                                }
+
+                                                .main-menu .submenu.submenu--mega>.submenu-heading .card-title {
+                                                    margin: 0 0 8px 0;
+                                                    font-size: 16px;
+                                                    font-weight: 600;
+                                                }
+
+                                                /* Card look with minimal footprint */
+                                                .main-menu .submenu.submenu--mega>.submenu-card {
+                                                    border-radius: 12px;
+                                                    padding: 14px;
+                                                    background: #fff;
+                                                    /* assume light header; adjust if you use dark */
+                                                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+                                                }
+
+                                                .main-menu .submenu.submenu--mega>.submenu-card>a {
+                                                    display: block;
+                                                    font-weight: 600;
+                                                    line-height: 1.25;
+                                                    margin-bottom: 6px;
+                                                }
+
+                                                .main-menu .submenu.submenu--mega>.submenu-card>p {
+                                                    margin: 0;
+                                                    font-size: 14px;
+                                                    line-height: 1.5;
+                                                    opacity: 0.9;
+                                                }
+                                            }
+                                        </style>
+                                    </li>
                                     <li><a href="blog.html"><span>Blog</span></a></li>
 
                                     <li><a href="contact.html"><span>Contact</span></a></li>
@@ -179,8 +215,8 @@
 
                                             <ul class="sub-menu">
                                                 <h5 class="card-title">Counselling & Therapy Services</h5>
-                                                <li>
-                                                    <a href="service-1.html"><span>Adult Individual Therapy</span>
+                                               <li>
+                                                    <a href="service-details1.html"><span>Adult Individual Therapy</span>
                                                         <!-- <div class="card">
                                                             <div class="card-body">
                                                                 <p class="card-text">Offers a supportive and
@@ -194,7 +230,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="service-2.html"><span>Adult Individual Therapy</span>
+                                                    <a href="service-details2.html"><span>Adolescent Therapy</span>
                                                         <!-- <div class="card">
                                                             <div class="card-body">
                                                                 <p class="card-text">Offers a supportive and
@@ -208,7 +244,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="service-3.html"><span>Adult Individual Therapy</span>
+                                                    <a href="service-details3.html"><span>Psychosexual Therapy</span>
                                                         <!-- <div class="card">
                                                             <div class="card-body">
                                                                 <p class="card-text">Offers a supportive and
@@ -222,7 +258,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="service-4.html"><span>Adult Individual Therapy</span>
+                                                    <a href="service-details4.html"><span>Couples Therapy</span>
                                                         <!-- <div class="card">
                                                             <div class="card-body">
                                                                 <p class="card-text">Offers a supportive and
