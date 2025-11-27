@@ -2911,6 +2911,14 @@ body[data-aos-easing=ease] [data-aos] {
   justify-content: center;
   gap: 10px;
 }
+@media (max-width: 767px) {
+  .btns {
+    flex-direction: column;
+    align-items: center; 
+    gap: 0px;
+  }
+}
+
 
 .header-transparent {
   position: absolute;
