@@ -1,9 +1,9 @@
 /*-----------------------------------------------------------------------------------
 
-    Project Name: Mindycoach - Therapy & Counseling HTML Template
+    Project Name: Jane Gore - Therapy & Counseling HTML Template
     Author: XpressBuddy -->> (https://themeforest.net/user/xpressbuddy)
     Support: support@xpressbuddy.com
-    Description: Mindycoach - Therapy & Counseling HTML Template
+    Description: Jane Gore - Therapy & Counseling HTML Template
     Developer: Mohammad Wasim Mia -> contact@xpressbuddy.com
     Version: 1.0
 
@@ -3384,6 +3384,9 @@ body[data-aos-easing=ease] [data-aos] {
     opacity: .5;
     z-index: -1; }
 
+    .gradient-bg-7 {
+    background: linear-gradient(226deg, #e8eef1 0%, #f79680 100%);
+}
 .bg-primary {
   background-color: var(--color-primary) !important; }
 
@@ -5035,6 +5038,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 .custom-footer-logo .footer-logo img {
     transform: scale(2);
     transform-origin: top left;
+    max-width: 20%;
 }
 @media (max-width: 767px) {
     .custom-footer-logo .footer-logo img {
@@ -5395,7 +5399,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     .appointment-info {
       padding: 60px 20px; } }
   .appointment-info h2 {
-    font-size: 57px;
+    font-size: 50px;
     color: var(--color-white);
     padding-bottom: 21px;
     margin-bottom: 37px;
@@ -5420,7 +5424,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       flex-wrap: wrap; } }
 
 .appointment-info-item {
-  width: 50%; }
+  width: 100%; }
   @media (max-width: 1199px) {
     .appointment-info-item {
       width: 100%; } }
